@@ -22,14 +22,11 @@ You can also embed plots, for example:
 ```{r pressure, echo=FALSE}
 library(plotly)
 
-pal <- c("red", "blue", "green")
-
-p <- plot_ly(data = iris, x = ~Sepal.Length, y = ~Petal.Length, color = ~Species, colors = pal)
+p <- plot_ly(data = iris, x = ~Sepal.Length, y = ~Petal.Length, color = ~Species, colors = "Set1")
 
 # Create a shareable link to your chart
 # Set up API credentials: https://plot.ly/r/getting-started
-chart_link = plotly_POST(p, filename="scatter/color-custom")
-chart_link
+p
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
